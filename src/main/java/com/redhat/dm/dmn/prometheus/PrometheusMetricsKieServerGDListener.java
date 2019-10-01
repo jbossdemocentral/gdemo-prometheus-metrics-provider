@@ -12,7 +12,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.redhat.dm.dmn.listener;
+package com.redhat.dm.dmn.prometheus;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -37,9 +37,9 @@ import org.slf4j.LoggerFactory;
 
 import io.prometheus.client.Histogram;
 
-public class PrometheusMetricsGDListener implements DMNRuntimeEventListener {
+public class PrometheusMetricsKieServerGDListener implements DMNRuntimeEventListener {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(PrometheusMetricsGDListener.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(PrometheusMetricsKieServerGDListener.class);
 
     private static final String CARD_HOLDER_RISK_RATING_DECISION = "Cardholder Risk Rating";
     private static final String DISPUTE_RISK_RATING_DECISION = "Dispute Risk Rating";
@@ -113,7 +113,7 @@ public class PrometheusMetricsGDListener implements DMNRuntimeEventListener {
         processAutomaticallyRating = par;
     }
 
-    public PrometheusMetricsGDListener(String... labels) {
+    public PrometheusMetricsKieServerGDListener(String... labels) {
         this.labels = labels;
     }
 

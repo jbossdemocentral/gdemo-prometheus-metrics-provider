@@ -4,12 +4,12 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.redhat.gdemo</groupId>
-  <artifactId>gdemo-dmn-listener</artifactId>
+  <artifactId>gdemo-prometheus-metrics-provider</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <name>GDemo DMN Listener</name>
-  <description>Holds the DMN Listeners for the GDemo</description>
+  <description>Prometheus Metrics Provider for the GDemo</description>
   <properties>
-    <version.org.kie>7.23.0-SNAPSHOT</version.org.kie>
+    <version.org.kie>7.27.0.Final</version.org.kie>
     <version.io.prometheus>0.5.0</version.io.prometheus>
     <version.org.slf4j>1.7.26</version.org.slf4j>
   </properties>
@@ -41,6 +41,12 @@
     </dependency>
 
     <!-- Prometheus Dependencies -->
+    <dependency>
+      <groupId>org.kie.server</groupId>
+      <artifactId>kie-server-services-prometheus</artifactId>
+      <version>${version.org.kie}</version>
+      <scope>provided</scope>
+    </dependency>
     <dependency>
       <groupId>io.prometheus</groupId>
       <artifactId>simpleclient</artifactId>
